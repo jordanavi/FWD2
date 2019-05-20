@@ -1,0 +1,24 @@
+<!-- Construa uma página web capaz de solicitar ao usuário um texto qualquer e, em seguida,
+informe-o, através de uma mensagem de alerta, a quantidade de palavras contidas no texto. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 6</title>
+
+    <script>
+        var texto = prompt("Digite um texto qualquer: ");
+        var quantidade = 1;
+
+        for(var i = 0; i< texto.length; i++){
+            if(texto.charAt(i) == " "){
+                quantidade ++;
+            }
+        }
+        alert("O texto digitado possui " + quantidade + " palavras!");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
