@@ -1,0 +1,29 @@
+<!-- Construa uma página web capaz de solicitar o nome completo do usuário e, em seguida,
+exiba, através de uma mensagem de alerta, o primeiro nome dele contendo letras maiúsculas
+e o restante composto apenas por letras minúsculas. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 5</title>
+
+    <script>
+        var nomecompleto = prompt("Digite o nome completo do usuário: ");
+        var nome, sobrenome;
+        var pos;
+
+        for(var i = 0; i < nomecompleto.length; i ++){
+            if((nomecompleto.charAt(i)) == " "){
+                pos = i;
+                break;
+            }
+        }
+        alert("Nome: " + nomecompleto.slice(0,pos).toLocaleUpperCase());
+        alert("Sobrenome: " + nomecompleto.slice(pos+1, nomecompleto.length).toLocaleLowerCase());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
