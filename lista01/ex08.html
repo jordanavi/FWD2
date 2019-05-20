@@ -1,8 +1,19 @@
+<!-- Construa uma página web capaz de solicitar ao usuário uma expressão matemática, como por
+exemplo ((5*8)-9), e, em seguida, informar, através de uma mensagem de alerta, o resultado
+da expressão. -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Exercício 8</title>
+
+    <script>
+        var expressao = prompt("Digite uma expressão matemática: ");
+        var num = parseFloat(expressao);
+
+        alert(eval(expressao));
+
+    </script>
 </head>
 <body>
     
