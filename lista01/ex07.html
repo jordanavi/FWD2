@@ -12,9 +12,18 @@ deverá ser substituída pela segunda palavra. -->
     <script>
         var texto = prompt("Digite um texto qualquer: ");
         var palavra1 = prompt("Digite uma palavra (que vai ser buscada)");
-        var palavra2 = prompt("Digite outra palavra (que vai substituir)");
+        var palavra2 = prompt("Digite outra palavra (que vai substituir)"
+        );
 
-        alert(texto.replace(palavra1,palavra2));
+        var textoDividido = texto.split(" ");
+
+        for(var i=0; i < textoDividido.length; i++){
+            if(textoDividido[i] == palavra1){
+                textoDividido[i] = palavra2;
+            }
+        }
+        texto = textoDividido.join(" ");
+        alert(texto);
 
     </script>
 </head>
