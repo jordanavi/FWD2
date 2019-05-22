@@ -10,22 +10,29 @@ hexadecimal. -->
     <title>Exercício 10</title>
     <script>
         var num = parseInt(prompt("Digite um número inteiro positivo maior ou igual a 2:"));
-
-        document.write("Base decimal<br>")
+        var bin, hexa;
+        document.write("<table><tr><th>Base decimal</th><th>Base Binária</th><th>Base Hexadecimal </th></tr>");
+    
         for(var i = 0; i < num; i++){ 
-            document.write(i+"<br>");
+            bin = i.toString(2);
+            hexa = i.toString(16);
+            document.write("<tr><td>"+i+"</td><td>"+bin+"</td><td>"+hexa+"</td></tr>");
         }
-        
-        document.write("Base binária <br>")
-        for(var i = 0; i < num; i++){
-            document.write(i.toString(2)+"<br>");
-        }
-        
-        document.write("Base hexadecimal <br>")
-        for(var i = 0; i < num; i++){
-            document.write(i.toString(16)+"<br>");
-        }
+        document.write("</table>");
     </script>
+
+    <style>
+        th,
+        td, 
+        table{
+            border: 1px solid black;
+            text-align: center;
+            padding: 15px 25px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
     
