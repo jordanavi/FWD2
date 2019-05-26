@@ -7,7 +7,7 @@ e o restante composto apenas por letras minúsculas. -->
     <meta charset="UTF-8">
     <title>Exercicio 5</title>
 
-    <script>
+    <!-- <script>
         var nomecompleto = prompt("Digite o nome completo do usuário: ");
         var nome, sobrenome;
         var pos;
@@ -18,9 +18,19 @@ e o restante composto apenas por letras minúsculas. -->
                 break;
             }
         }
-        alert("Nome: " + nomecompleto.slice(0,pos).toLocaleUpperCase());
-        alert("Sobrenome: " + nomecompleto.slice(pos+1, nomecompleto.length).toLocaleLowerCase());
+        alert(nomecompleto.slice(0,pos).toLocaleUpperCase() + " " +nomecompleto.slice(pos+1, nomecompleto.length).toLocaleLowerCase());
         
+    </script> -->
+    <script>
+        var nomecompleto = prompt("Digite o nome completo do usuário: ");
+        nomecompleto = nomecompleto.toLowerCase();
+        nomecompleto = nomecompleto.split(" ");
+        nomecompleto[0] = nomecompleto[0].toUpperCase();
+        nomecompleto[nomecompleto.length-1] = nomecompleto[nomecompleto.length-1].toUpperCase();
+        nomecompleto = nomecompleto.join(" ");
+        alert(nomecompleto);
+
+
     </script>
 </head>
 <body>

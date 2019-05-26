@@ -7,9 +7,14 @@ escreva no corpo do documento a quantidade de caracteres contida no nome dele. -
         <meta charset="UTF-8">
         <title>Exercicio 3</title>
         
+        <!-- <script>
+            var nome = prompt ("Digite um nome:");
+            document.write("O nome digitado tem " + nome.length + " caracteres.");
+        </script> -->
         <script>
             var nome = prompt ("Digite um nome:");
-            alert("O nome digitado tem " + nome.length + " caracteres.");
+            nome = nome.replace(" ","");
+            document.write("O nome digitado tem " + nome.length + " caracteres.");
         </script>
     </head>
     <body>

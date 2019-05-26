@@ -12,11 +12,18 @@ informe-o, através de uma mensagem de alerta, a quantidade de palavras contidas
 
         for(var i = 0; i< texto.length; i++){
             if(texto.charAt(i) == " "){
+                //PESQUISAR ESPAÇOS VAZIOS
                 quantidade ++;
             }
         }
         alert("O texto digitado possui " + quantidade + " palavras!");
     </script>
+    <!-- <script>
+        var texto = prompt("Digite um texto qualquer: ");
+        var textodividido = texto.split(" ");
+
+        alert("O texto possui" + textodividido.length + "palavras");
+    </script> -->
 </head>
 <body>
     
