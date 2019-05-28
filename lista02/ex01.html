@@ -6,21 +6,21 @@
     <title>Exercicio 01 - Lista 2</title>
 
     <script>
-  
-            var numSorteados = [];
-            var numAleatorio = 0;
 
-            for (i = 0; i < 6; i++) {
-                numAleatorio = Math.floor(Math.random() * 60 + 1);
-                if (numSorteados.indexOf(numAleatorio) == -1)
-                    numSorteados.push(numAleatorio);
-            }
+        var numSorteados = [];
+        var numAleatorio = 0;
 
-            function sortFunction(a, b) {
-                return (a - b);
-            }
-            document.write("Números sorteados: " + numSorteados.sort(sortFunction));
-        
+        for (i = 0; i < 6; i++) {
+            numAleatorio = Math.floor(Math.random() * 60 + 1);
+            if (numSorteados.indexOf(numAleatorio) == -1)
+                numSorteados.push(numAleatorio);
+        }
+
+        function sortFunction(a, b) {
+            return (a - b);
+        }
+        document.write("Números sorteados: " + numSorteados.sort(sortFunction));
+
     </script>
 
     <style>
@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    
+
 </body>
 
 </html>
