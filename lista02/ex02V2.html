@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Exercicio 2 - Lista 2</title>
+
+    <script>
+        //var numero = prompt("Digite o número de pessoas que irá sortear: ");
+        numero = 6
+        var pessoas = ['Jordana', 'Rodrigo', 'Roberto', 'Thacia', 'Gabriel', 'Filipe'];
+        document.write("<p>Lista de pessoas: " + pessoas + "</p>");
+        pessoas.sort(sorteando);
+
+        document.write("<h1>Ordem de apresentação</h1>");
+
+        for (var i = 0; i < numero; i++) {
+            //pessoas [i] = prompt("Nome da " + (i + 1) + "ª pessoa: ");
+            //aqui faz o sorteio
+            document.write("<p> " + (i + 1) + "º - " + pessoas[i] + "</p><hr>");
+        }
+
+        function sorteando() {
+            //return Math.floor(Math.random() * pessoas.length);
+            return (Math.round(Math.random()) - 1)
+        }
+    </script>
+    <style>
+        p {
+            text-align: left;
+            background-color: gray;
+            padding: 15px;
+            margin: 0px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        hr { 
+            border-top: 2px solid rgb(0, 0, 0);
+            margin: 0px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
