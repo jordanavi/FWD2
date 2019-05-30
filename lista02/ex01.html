@@ -9,14 +9,15 @@
 
         var numSorteados = [];
         var numAleatorio = 0;
+        //PQU
 
-        for (i = 0; i < 6; i++) {
-            numAleatorio = Math.floor(Math.random() * 60 + 1);
-            if (numSorteados.indexOf(numAleatorio) == -1)
-                numSorteados.push(numAleatorio);
+        for (i = 0; i < 6; i++) { //sorteia 6 numeros
+            numAleatorio = Math.floor(Math.random() * 60 + 1); //random: metodo que sorteia valor entre 0 e 1 | 
+            if (numSorteados.indexOf(numAleatorio) == -1) //ver se o numero ja foi sorteado - retorna -1 ele não encontrou 
+                numSorteados.push(numAleatorio); 
         }
 
-        function sortFunction(a, b) {
+        function sortFunction(a, b) { //funcao para ordenar
             return (a - b);
         }
         document.write("Números sorteados: " + numSorteados.sort(sortFunction));
