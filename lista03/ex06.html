@@ -16,11 +16,16 @@
             }
             else
                 if (senha1 == confimaSenha) {
-                    alert("Login efetuado com sucesso!");
+                    if(senha1.length > 8){
+                        alert("A senha deve conter no máximo 8 caracteres.");
+                        limpar();
+                    }
+                    else
+                        alert("Login efetuado com sucesso!");
                 }
                 else
                     alert("Fallha na autenticação. Usuário ou senha incorretos.");
-                    limpar();
+            limpar();
         }
         function limpar() {
             document.getElementById("login").value = "";
@@ -31,12 +36,17 @@
     <style>
         form {
             text-align: center;
+            margin-top: 30px;
         }
 
         #titulo {
             color: blue;
             font-size: 24px;
             font-family: Verdana;
+        }
+
+        .vermelho {
+            color: red;
         }
     </style>
 </head>
@@ -50,11 +60,11 @@
         <br>
         <label for="txtSenha">Senha</label>
         <input type="password" id="senha">
-        <label for="descricao">(max. 8 caracteres)</label>
+        <label for="descricao" class="vermelho">(max. 8 caracteres)</label>
         <br>
         <label for="txtConfSenha">Confirmar senha</label>
         <input type="password" id="confSenha">
-        <label for="descricao">(max. 8 caracteres)</label>
+        <label for="descricao" class="vermelho">(max. 8 caracteres)</label>
         <br><br>
         <button onclick="entrar()">Entrar</button>
         <button onclick="limpar()">Limpar</button>
