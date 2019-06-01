@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Exercício 6 - Lista 3</title>
-</head>
-<script>
+    <script>
+        function entrar() {
 
-</script>
+            var login = document.getElementById("login").value;
+            var senha1 = document.getElementById("senha").value;
+            var confimaSenha = document.getElementById("confSenha").value;
+
+            if (login == '') { //Verifica se o Login foi digitado corretamente, ou seja, se o valor deste campo é diferente de vazio
+                alert("Campo de login vazio. Por favor, preencha os campos corretamente.");
+            }
+            else
+                if (senha1 == confimaSenha) {
+                    alert("Login efetuado com sucesso!");
+                }
+                else
+                    alert("Fallha na autenticação. Usuário ou senha incorretos.");
+                    limpar();
+        }
+        function limpar() {
+            document.getElementById("login").value = "";
+            document.getElementById("senha").value = "";
+            document.getElementById("confSenha").value = "";
+        }
+    </script>
+    <style>
+        form {
+            text-align: center;
+        }
+
+        #titulo {
+            color: blue;
+            font-size: 24px;
+            font-family: Verdana;
+        }
+    </style>
+</head>
+
 <body>
-    
+    <form action="">
+        <label for="txtTitulo" id="titulo">Acesso ao Sistema</label>
+        <br><br>
+        <label for="txtLogin">Login</label>
+        <input type="text" id="login">
+        <br>
+        <label for="txtSenha">Senha</label>
+        <input type="password" id="senha">
+        <label for="descricao">(max. 8 caracteres)</label>
+        <br>
+        <label for="txtConfSenha">Confirmar senha</label>
+        <input type="password" id="confSenha">
+        <label for="descricao">(max. 8 caracteres)</label>
+        <br><br>
+        <button onclick="entrar()">Entrar</button>
+        <button onclick="limpar()">Limpar</button>
+    </form>
 </body>
+
 </html>
