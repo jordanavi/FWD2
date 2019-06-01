@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Exercício 4 - Lista 3</title>
-</head>
-<script>
 
-</script>
+    <script>
+        function calculaResultado(){
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 =  parseFloat(document.getElementById("nota2").value);
+            var total = (nota1 + nota2);
+            //alert("Nota 1= " + nota1 + "| Nota 2= " + nota2 + " | Total= " + total);
+
+            if(total < 60)
+                alert("Aluno reprovado! Faltaram: " + (60-total) + " pontos");
+            else
+                alert("Aluno aprovado! Nota final " +  total);            
+        }
+    </script>
+</head>
+
 <body>
+    <div>
+        <!-- fazer validação para aceitar valor de até 50 em cada campo -->
+        <p>Nota (1º bimestre):<input type="number" id="nota1"></input></p>
+        <p>Nota (1º bimestre):<input type="number" id="nota2"></input></p>
+        <button onclick="calculaResultado()">Resultado</button>
+    </div>
     
 </body>
+
 </html>

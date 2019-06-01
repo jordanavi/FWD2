@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Exercício 5 - Lista 3</title>
 </head>
 <script>
+    function calcular(argumento) {
+        document.getElementById('txtResultado').value = eval(parseFloat(document.getElementById('txtValor1').value) + argumento + parseFloat(document.getElementById('txtValor2').value));
+    }
 
+    //Tratar a divisão por zero
+    //garantir que os numeros digitados dentro de cada uma das caixas (1º e 2º valor).
 </script>
-<body>
-    
+<form>
+    <label for="txtNome">Valor 1: </label>
+    <input type="number" id="txtValor1">
+    <br><br>
+    <label for="txtNome">Valor 2: </label>
+    <input type="number" id="txtValor2">
+    <br><br>
+    <input type="button" value="+" onclick="calcular('+')">
+    <input type="button" value="-" onclick="calcular('-')">
+    <input type="button" value="*" onclick="calcular('*')">
+    <input type="button" value="/" onclick="calcular('/')">
+    <br><br>
+    <label for="txtResultado">Resultado: </label>
+    <input type="text" id="txtResultado">
+</form>
+
 </body>
+
 </html>
