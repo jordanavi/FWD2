@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Exercício 2 - Lista 3</title>
-</head>
-<script>
+    <script>
+        function dobrar() {
+            //fazer validação do valor numérico
 
-</script>
+            var valor = document.getElementById("valor").value;
+            document.getElementById("dobro").value = (valor * 2);
+        }
+    </script>
+</head>
+
 <body>
-    
+    <div>
+        <p>Digite um valor <input type="number" id="valor"></input></p>
+        <button onclick="dobrar()"> Mostrar o dobro </button>
+        <p>Dobro do valor <input type="text" id="dobro" disabled></input></p>
+    </div>
+
 </body>
+
 </html>
