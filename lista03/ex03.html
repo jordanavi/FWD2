@@ -6,27 +6,105 @@
     <title>Exercício 3 - Lista 3</title>
 
     <script>
-        function calculaResultado(){
+        function calculaResultado() {
             var nota1 = parseFloat(document.getElementById("nota1").value);
-            var nota2 =  parseFloat(document.getElementById("nota2").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
             var total = (nota1 + nota2);
             //alert("Nota 1= " + nota1 + "| Nota 2= " + nota2 + " | Total= " + total);
 
-            if(total < 60)
-                alert("Aluno reprovado!")
+            if (total < 60)
+                alert("Aluno reprovado!");
             else
-                alert("Aluno aprovado!")            
+                alert("Aluno aprovado!");
+        }
+
+        function checarValor(id) {
+            if (document.getElementById(id).value > 50 || document.getElementById(id).value < 0) {
+                alert("A nota máxima permitida nesse campo é 50 pontos e a mínima é 0.")
+                apagaUltimoDigito(id);
+
+                //document.getElementById(id).value = "";
+            }
+        }
+
+        function apagaUltimoDigito(id) {
+            var tamanho = document.getElementById(id).value.toString.length;
+            document.getElementById(id).value = document.getElementById(id).value.slice(0, tamanho - 1)
         }
     </script>
+    <style>
+        table {
+            border-spacing: 10px;
+        }
+
+        input[type="button"] {
+
+            border-radius: 5px;
+            padding: 7px;
+            transition: 0.5s;
+            background-color: rgb(235, 170, 85);
+            margin: 10px 0px;
+            text-align: left;
+        }
+
+        input[type="button"]:hover {
+            box-shadow: 2px 2px 2px grey;
+            cursor: pointer;
+
+        }
+
+        input[type="button"]:active {
+            transform: scale(0.9);
+            background-color: #f8cb8d;
+        }
+
+        #nota1,
+        #nota2 {
+            background-color: rgba(255, 248, 220, 0.46);
+            border-radius: 7px;
+            width: 150px;
+        }
+
+        form {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+            border: 1px dashed black;
+            width: 340px;
+        }
+
+        .caixa {
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <p>Nota (1º bimestre):<input type="number" min="0" max="50" id="nota1"></input></p>
-        <p>Nota (1º bimestre):<input type="number" min="0" max="50" id="nota2"></input></p>
-        <button onclick="calculaResultado()">Resultado</button>
+    <div class="caixa">
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <label for="nota1">Nota (1º bimestre):</label>
+                    </td>
+                    <td>
+                        <input type="number" id="nota1" min="0" max="50" onkeyup="checarValor(this.id)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="nota2">Nota (2º bimestre):</label>
+                    </td>
+                    <td>
+                        <input type="number" id="nota2" min="0" max="50" onkeyup="checarValor(this.id)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Resultado" onclick="calculaResultado()">
+                    </td>
+                </tr>
+            </table>
+        </form>
     </div>
-    
 </body>
 
 </html>
