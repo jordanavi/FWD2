@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1 - Lista 3</title>
+    <script>
+        function exibirMensagem() {
+            //alert("Sistemas para Internet");
+            document.getElementById("texto").innerHTML = "Sistemas para Internet";
+        }
+        function apagarMensagem() {
+            document.getElementById("texto").innerHTML = "";
+
+        }
+    </script>
+    <style>
+        .classeBotao {
+            text-align: center;
+            
+        }
+
+        #botao {
+            font: bold 12px/24px arial, helvetica, sans-serif;
+            padding: 0px;
+            text-decoration: none;
+            color: #ccc;
+            background: #666;
+            width: 170px;
+            height: 60px;
+        }
+
+        #texto {
+            font: bold 12px/24px arial, helvetica, sans-serif;
+            padding: 0px;
+            text-decoration: none;
+            color: #ccc;
+            background: rgba(64, 168, 3, 0.89);
+            width: 170px;
+            height: 60px;
+        }
+        p{
+            width: 170px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="classeBotao">
+        <table>
+            <tr><td>
+                <button id="botao" onclick="exibirMensagem()">Exibir mensagem</button>
+            </tr></td>
+            <tr><td>
+                <p id="texto"></p>
+            </tr></td>
+            <tr><td>
+                <button id="botao" onclick="apagarMensagem()">Apagar mensagem</button>
+            </tr></td>
+        </table>
+    </div>
+</body>
+
+</html>

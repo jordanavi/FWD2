@@ -1,0 +1,28 @@
+form {
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1 {
+    color: blue;
+    font-size: 24px;
+    margin-bottom: 18px;
+    font-family: Verdana;
+}
+
+.vermelho {
+    color: red;
+}
+
+table {
+    margin: auto;
+    border-spacing: 5px;
+}
+
+.coluna1 {
+    text-align: right;
+}
+input[type="button"]{
+    border-radius: 4px;
+    padding: 3px 7px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 6 - Lista 3</title>
+
+    <script src="js/calculadora.js"></script>
+    <link rel="stylesheet" href="css/calc.css">
+
+    <script>
+        function entrar() {
+
+            var login = document.getElementById("login").value;
+            var senha1 = document.getElementById("senha").value;
+            var confimaSenha = document.getElementById("confSenha").value;
+
+            if (login == '') { //Verifica se o Login foi digitado corretamente, ou seja, se o valor deste campo é diferente de vazio
+                alert("Campo de login vazio. Por favor, preencha os campos corretamente.");
+            }
+            else
+                if (senha1 == confimaSenha) {
+                    if (senha1.length > 8) {
+                        alert("A senha deve conter no máximo 8 caracteres.");
+                        limpar();
+                    }
+                    else
+                        alert("Login efetuado com sucesso!");
+                }
+                else
+                    alert("Fallha na autenticação. Usuário ou senha incorretos.");
+            limpar();
+        }
+        function limpar() {
+            document.getElementById("login").value = "";
+            document.getElementById("senha").value = "";
+            document.getElementById("confSenha").value = "";
+        }
+    </script>
+    <style>
+        form {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        h1 {
+            color: blue;
+            font-size: 24px;
+            margin-bottom: 18px;
+            font-family: Verdana;
+        }
+
+        .vermelho {
+            color: red;
+        }
+
+        table {
+            margin: auto;
+            border-spacing: 5px;
+        }
+
+        .coluna1 {
+            text-align: right;
+        }
+        input[type="button"]{
+            border-radius: 4px;
+            padding: 3px 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h1>Acesso ao Sistema</h1>
+        <table>
+            <tr>
+                <td class="coluna1">
+                    <label for="txtLogin">Login</label>
+                </td>
+                <td>
+                    <input type="text" id="login">
+                </td>
+            </tr>
+            <tr>
+                <td class="coluna1">
+                    <label for="txtSenha">Senha</label>
+                </td>
+                <td>
+                    <input type="password" id="senha">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(max. 8 caracteres)</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="coluna1">
+                    <label for="txtConfSenha">Confirmar senha</label>
+                </td>
+                <td>
+                    <input type="password" id="confSenha">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(max. 8 caracteres)</label>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Entrar" onclick="entrar()">
+                </td>
+                <td>
+                    <input type="button" type="button" value="Limpar" onclick="limpar()">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
