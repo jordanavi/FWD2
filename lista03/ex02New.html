@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 - Lista 3</title>
+    <script>
+        function dobrar() {
+            var valor = document.getElementById("numero").value;
+            document.getElementById("dobro").value = (valor * 2);
+        }
+    </script>
+    <style>
+        table {
+            border-spacing: 10px;
+        }
+
+        input[type="button"] {
+
+            border-radius: 5px;
+            padding: 7px;
+            transition: 0.5s;
+            background-color: rgb(235, 170, 85);
+            margin: 10px 0px;
+            text-align: left;
+        }
+
+        input[type="button"]:hover {
+            box-shadow: 2px 2px 2px grey;
+            cursor: pointer;
+
+        }
+
+        input[type="button"]:active {
+            transform: scale(0.9);
+            background-color: #f8cb8d;
+        }
+
+        #nota1,
+        #nota2 {
+            background-color: rgba(255, 248, 220, 0.46);
+            border-radius: 7px;
+            width: 150px;
+        }
+
+        form {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+            border: 1px dashed black;
+            width: 340px;
+        }
+
+        .caixa {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caixa">
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <label for="valor">Digite um valor: </label>
+                    </td>
+                    <td>
+                        <!-- faz a validação do valor numérico -->
+                        <input type="number" id="numero">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="btn" value="Mostrar o dobro" onclick="dobrar()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dobro">Dobro do valor: </label>
+                    </td>
+                    <td>
+                        <input type="number" id="dobro" readonly>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
