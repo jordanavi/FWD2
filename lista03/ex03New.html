@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Exercício 4 - Lista 3</title>
+    <title>Exercício 3 - Lista 3</title>
 
     <script>
         function calculaResultado() {
@@ -12,20 +12,21 @@
             var total = (nota1 + nota2);
             //alert("Nota 1= " + nota1 + "| Nota 2= " + nota2 + " | Total= " + total);
 
-            //TRATAR VALOR VAZIO - ERRO
+//TRATAR VALOR VAZIO - ERRO
             if (total < 60)
-                alert("Aluno reprovado! Faltaram: " + (60 - total) + " pontos");
+                alert("Aluno reprovado!");
             else
-                alert("Aluno aprovado! Nota final " + total);
+                alert("Aluno aprovado!");
         }
 
         function checarValor(id) {
             if (document.getElementById(id).value > 50 || document.getElementById(id).value < 0) {
                 alert("A nota máxima permitida nesse campo é 50 pontos e a mínima é 0.")
-                
                 document.getElementById(id).value = "";
             }
         }
+
+        
     </script>
     <style>
         table {
@@ -64,39 +65,42 @@
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
             border: 1px dashed black;
             width: 340px;
+        }
+
+        .caixa {
             margin: auto;
         }
     </style>
 </head>
 
 <body>
-
-    <form action="">
-        <table>
-            <tr>
-                <td>
-                    <label for="nota1">Nota (1º bimestre):</label>
-                </td>
-                <td>
-                    <input type="number" id="nota1" min="0" max="50" onkeyup="checarValor(this.id)">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="nota2">Nota (2º bimestre):</label>
-                </td>
-                <td>
-                    <input type="number" id="nota2" min="0" max="50" onkeyup="checarValor(this.id)">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" value="Resultado" onclick="calculaResultado()">
-                </td>
-            </tr>
-        </table>
-    </form>
-
+    <div class="caixa">
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <label for="nota1">Nota (1º bimestre):</label>
+                    </td>
+                    <td>
+                        <input type="number" id="nota1" min="0" max="50" onkeyup="checarValor(this.id)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="nota2">Nota (2º bimestre):</label>
+                    </td>
+                    <td>
+                        <input type="number" id="nota2" min="0" max="50" onkeyup="checarValor(this.id)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Resultado" onclick="calculaResultado()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 
 </html>

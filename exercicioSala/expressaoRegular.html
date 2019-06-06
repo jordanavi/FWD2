@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Expressoes Regulares</title>
+
+    <script>
+        function funcao1() {
+            var texto = document.getElementById("txtInfo").value;
+            //var padrao = /^ \(\d{2}\)\d{4,5}-\d{4}$/;
+
+            //^ inicio
+            // $ fim
+            //? 0 ou 1 vez
+            //{} delimitador de tamanho
+            // \antes do () serve para incluir ele na expressão
+
+
+
+            //data de nascimento
+            //var padrao = /^\d{2}\/\d{2}\/(\d{2}|\d{4})$/ 
+
+            //somente letras do alfabeto de maiusculas e minuscula e alguns caracteres
+            //var padrao = /^[A-z]$/
+
+
+            var padrao = /^ \d \d$/
+            if(padrao.test(texto))
+                alert("Dentro do padrão"); 
+            else
+                alert("Fora do pardão");
+        }
+    </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <table>
+        <th>
+            <tr>
+                <td>
+                    <label for="nome">Data de nascimento: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfo">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="btn" value="botao" onclick="funcao1()">
+                </td>
+            </tr>
+        </th>
+    </table>
+</body>
+
+</html>

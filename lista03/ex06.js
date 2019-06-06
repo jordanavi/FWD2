@@ -12,29 +12,27 @@ function entrar() {
         alert("Campo de senha vazio. Por favor, preencha os campos corretamente.");
         return false;
     }
-    else
-        if (confimaSenha == '') { //Verifica se a confirmacao da senha foi digitada corretamente, ou seja, se o valor deste campo é diferente de vazio
-            alert("Campo de confirmação de senha vazio. Por favor, preencha os campos corretamente.");
-            return false;
-        }
-        else
-            if (senha1 != confimaSenha) { //verifica se as senhas são diferentes
-                alert("As senhas são diferentes. Por favor digite novamente.");
-                limpar();
-                return false;
-            }
-            else
-                if (senha1.length > 8) { //verifica o tamanho das senhas
-                    alert("A senha deve conter no máximo 8 caracteres.");
-                    limpar();
-                    return false;
-                }
-                else //sucesso
-                    alert("Login efetuado com sucesso!");
-    return true;
+    else if (confimaSenha == '') { //Verifica se a confirmacao da senha foi digitada corretamente, ou seja, se o valor deste campo é diferente de vazio
+        alert("Campo de confirmação de senha vazio. Por favor, preencha os campos corretamente.");
+        return false;
+    }
+    else if (senha1 != confimaSenha) { //verifica se as senhas são diferentes
+        alert("As senhas são diferentes. Por favor digite novamente.");
+        return false;
+    }
+    else if (senha1.length > 8) { //verifica o tamanho das senhas
+        alert("A senha deve conter no máximo 8 caracteres.");
+        return false;
+    }
+    else {//sucesso
+        alert("Login efetuado com sucesso!");
+        limpar();
+        return true;
+    }
 }
 
 function limpar() {
-    document.getElementById("senha").value = "";
+    document.getElementById("login").value= ""
+;    document.getElementById("senha").value = "";
     document.getElementById("confSenha").value = "";
 }
