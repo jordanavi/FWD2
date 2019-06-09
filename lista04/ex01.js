@@ -55,3 +55,35 @@ function validarC() {
     else
         alert("Fora do pardão");
 }
+
+//EXERCÍCIO E
+function validarE() {
+    var textoE = document.getElementById("txtInfoE").value;
+
+    //MT maiusculo e minusculo; dois dígitos; ponto; tres digitos; traço; iftm  
+    var padraoE = /^MT-\d{2}.\d{3}-(IFTM|iftm)$/ 
+
+    if (padraoE.test(textoE))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do pardão");
+}
+
+//EXERCÍCIO F
+function validarF() {
+    var textoF = document.getElementById("txtInfoF").value;
+
+    //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúsculas e minúsculas)  
+    //var padraoF = /^MT-\d{2}.\d{3}-IFTM$/i 
+
+    //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúscolas e minúscolas) com espaço em branco entre M e T
+    var padraoF = /^M\s{0,1}T-\d{2}.\d{3}-IFTM$/i 
+
+    //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúscolas e minúscolas) com espaço em branco MT e IFTM
+    var padraoF = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M$/i 
+
+    if (padraoF.test(textoF))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do pardão");
+}
