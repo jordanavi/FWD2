@@ -87,3 +87,35 @@ function validarF() {
     else
         alert("Fora do pardão");
 }
+
+//EXERCÍCIO G
+function validarG() {
+    var textoG = document.getElementById("txtInfoG").value;
+
+    //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúsculas e minúsculas) com espaço em branco MT e IFTM
+    //var padraoG = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M$/i
+    
+    //MT; dois dígitos; ponto; três dígitos; traço; iftm (maiúsculas e minúsculas) com espaço em branco MT e IFTM;
+    //espaço em branco no final
+    //var padraoG = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M $/i
+
+    //com UBERLÂNDIA
+    //var padraoG = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M Uberlândia$/i
+
+    //com UBERLÂNDIA; com ou sem Centro
+    //var padraoG = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M Uberlândia( Centro)?$/i
+
+    //Maiúscula e minúscula no M
+    //var padraoG = /^(M\s?|m\s?)T-\d{2}.\d{3}-I\s?F\s?T\s?M\s? Uberlândia( Centro)?$/
+
+    //Maiúscula e minúscula no M e no T
+    //var padraoG = /^(M|m)\s?(T|t)\s?-\d{2}.\d{3}-I\s?F\s?T\s?M\s? Uberlândia( Centro)?$/
+
+    //Maiúscula e minúscula no MT e IFTM
+    var padraoG = /^(M|m)\s?(T|t)-\d{2}.\d{3}-(I|i)\s?(F|f)\s?(T|t)\s?(M|m) Uberlândia( Centro)?$/
+
+    if (padraoG.test(textoG))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do pardão");
+}
