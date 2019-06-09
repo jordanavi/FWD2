@@ -134,3 +134,18 @@ function validarH() {
     else
         alert("Fora do pardão");
 }
+//EXERCÍCIO I
+function validarI() {
+    var textoI = document.getElementById("txtInfoI").value;
+
+    //telefone com ddd de 2 dígitos
+    //var padraoI = /^\(\d{2}\)\d{5}-\d{4}$/
+
+    //telefone com ddd de 1 a 3 dígitos
+    var padraoI = /^\(\d{1,3}\)\d{5}-\d{4}$/
+
+    if (padraoI.test(textoI))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do pardão");
+}
