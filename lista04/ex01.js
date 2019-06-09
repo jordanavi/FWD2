@@ -119,3 +119,18 @@ function validarG() {
     else
         alert("Fora do pardão");
 }
+//EXERCÍCIO H
+function validarH() {
+    var textoH = document.getElementById("txtInfoH").value;
+
+    //telefone sem nada
+    //var padraoH = /^\d{5}-\d{4}$/
+
+    //telefone com ddd
+    var padraoH = /^\+\d{1,3}\(\d{2}\)\d{5}-\d{4}$/
+
+    if (padraoH.test(textoH))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do pardão");
+}
