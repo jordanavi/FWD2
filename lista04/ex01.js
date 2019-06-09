@@ -31,3 +31,27 @@ function validarB() {
         alert("Fora do pardão");
 }
 
+//EXERCÍCIO C
+function validarC() {
+    var textoC = document.getElementById("txtInfoC").value;
+
+    //IFTM maiusculo
+    //var padraoC = /^IFTM-$/;
+
+    //IFTM maiusculo e minúsculo
+    //var padraoC = /^IFTM-$/i;
+
+    //IFTM maiusculo e minúsculo; 3 dígitos e barra 
+    //var padraoC = /^IFTM-\d{3}\/$/i;
+    
+    //IFTM maiusculo e minúsculo; 3 digitos numericos; barra; 3 digitos numericos
+    var padraoC = /^IFTM-\d{3}\/\d{3}$/i;
+
+    //IFTM maiusculo e minúsculo; 3 digitos numericos; barra; 3 digitos numericos; traço; 2 caracteres alfanuméricos
+    var padraoC = /^IFTM-\d{3}\/\d{3}-\w{2}$/i;
+
+    if (padraoC.test(textoC))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do pardão");
+}
