@@ -1,0 +1,9 @@
+Bom dia, professor.
+Também mantenho um histórico da resulução dos exercícios no meu github.
+Desde a primeira lista tenho commmitado as versões de cada exercício sendo possível verificar o meu desenvolvimento, originalidade do meu código bem como a data em que foi feita cada atividade.
+
+Caso tenha interesse, segue o link:
+https://github.com/jordanavi/FWD2
+
+Atenciosamente,
+Jordana.
