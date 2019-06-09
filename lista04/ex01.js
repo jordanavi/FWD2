@@ -13,7 +13,17 @@ function validarA() {
 function validarB() {
     var textoB = document.getElementById("txtInfoB").value;
 
-    var padraoB = /^\d{3}.\d{3}.\d{3}-\d{2})$/
+    //três primeiros dígitos e ponto
+    //var padraoB = /^\d{3}\.$/
+
+    //seis primeiros dígitos e pontos
+    //var padraoB = /^\d{3}\.\d{3}\.$/
+
+    //nove primeiros dígitos e pontos
+    //var padraoB = /^\d{3}\.\d{3}\.\d{3}$/
+
+    //todos dígitos, pontos e traço
+    var padraoB = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/
 
     if (padraoB.test(textoB))
         alert("Dentro do padrão");
