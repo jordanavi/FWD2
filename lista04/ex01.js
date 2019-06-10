@@ -43,7 +43,7 @@ function validarC() {
 
     //IFTM maiusculo e minúsculo; 3 dígitos e barra 
     //var padraoC = /^IFTM-\d{3}\/$/i;
-    
+
     //IFTM maiusculo e minúsculo; 3 digitos numericos; barra; 3 digitos numericos
     var padraoC = /^IFTM-\d{3}\/\d{3}$/i;
 
@@ -61,7 +61,7 @@ function validarE() {
     var textoE = document.getElementById("txtInfoE").value;
 
     //MT maiusculo e minusculo; dois dígitos; ponto; tres digitos; traço; iftm  
-    var padraoE = /^MT-\d{2}.\d{3}-(IFTM|iftm)$/ 
+    var padraoE = /^MT-\d{2}.\d{3}-(IFTM|iftm)$/
 
     if (padraoE.test(textoE))
         alert("Dentro do padrão");
@@ -77,10 +77,10 @@ function validarF() {
     //var padraoF = /^MT-\d{2}.\d{3}-IFTM$/i 
 
     //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúscolas e minúscolas) com espaço em branco entre M e T
-    var padraoF = /^M\s{0,1}T-\d{2}.\d{3}-IFTM$/i 
+    var padraoF = /^M\s{0,1}T-\d{2}.\d{3}-IFTM$/i
 
     //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúscolas e minúscolas) com espaço em branco MT e IFTM
-    var padraoF = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M$/i 
+    var padraoF = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M$/i
 
     if (padraoF.test(textoF))
         alert("Dentro do padrão");
@@ -94,7 +94,7 @@ function validarG() {
 
     //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúsculas e minúsculas) com espaço em branco MT e IFTM
     //var padraoG = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M$/i
-    
+
     //MT; dois dígitos; ponto; três dígitos; traço; iftm (maiúsculas e minúsculas) com espaço em branco MT e IFTM;
     //espaço em branco no final
     //var padraoG = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M $/i
@@ -145,6 +145,30 @@ function validarI() {
     var padraoI = /^\(\d{1,3}\)\d{5}-\d{4}$/
 
     if (padraoI.test(textoI))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do pardão");
+}
+//EXERCÍCIO J
+function validarJ() {
+    var textoJ = document.getElementById("txtInfoJ").value;
+
+    //valor monetário
+    //var padraoJ = /^R\$$/
+
+    //com casas decimais
+    //var padraoJ = /^R\$\d{1},\d{1,2}$/
+
+    //até 999
+    //var padraoJ = /^R\$\d{1,3},\d{1,2}$/
+    
+    //um ou três dígitos no começo; ponto e três dígitos zero ou infinitas vezes; separados por ponto; vírgula e dois dígitoa no final
+    //var padraoJ = /^R\$\d{1,3}(.\d{3})*,\d{2}$/;
+
+    //um ou três dígitos no começo; ponto e três dígitos zero ou três vezes; separados por ponto; vírgula e dois dígitoa no final
+    var padraoJ = /^R\$\d{1,3}(.\d{3}){0,3},\d{2}$/;
+
+    if (padraoJ.test(textoJ))
         alert("Dentro do padrão");
     else
         alert("Fora do pardão");
