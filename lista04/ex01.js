@@ -161,7 +161,7 @@ function validarJ() {
 
     //até 999
     //var padraoJ = /^R\$\d{1,3},\d{1,2}$/
-    
+
     //um ou três dígitos no começo; ponto e três dígitos zero ou infinitas vezes; separados por ponto; vírgula e dois dígitoa no final
     //var padraoJ = /^R\$\d{1,3}(.\d{3})*,\d{2}$/;
 
@@ -169,6 +169,27 @@ function validarJ() {
     var padraoJ = /^R\$\d{1,3}(.\d{3}){0,3},\d{2}$/;
 
     if (padraoJ.test(textoJ))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do pardão");
+}
+//EXERCÍCIO K
+function validarK() {
+    var textoK = document.getElementById("txtInfoK").value;
+
+    //qualquer valor separado por :
+    //var padraoK = /^\d{2}:\d{2}:\d{2}:\d{2}$/;
+
+    //horas de 0 a 23
+    //var padraoK = /^([0][0-9]|[1][0-9]|[2][0-3]):\d{2}:\d{2}:\d{2}$/;
+
+    //horas de 0 a 23; minutos de 0 a 59;
+    //var padraoK = /^([0][0-9]|[1][0-9]|[2][0-3]):([0-5][0-9]):\d{2}:\d{2}$/;
+
+    //horas de 0 a 23; minutos de 0 a 59; segundos de 0 a 59;
+    var padraoK = /^([0][0-9]|[1][0-9]|[2][0-3]):([0-5][0-9]):([0-5][0-9]):([0-9][0-9])$/;
+
+    if (padraoK.test(textoK))
         alert("Dentro do padrão");
     else
         alert("Fora do pardão");
