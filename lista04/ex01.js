@@ -74,7 +74,7 @@ function validarE() {
     var textoE = document.getElementById("txtInfoE").value;
 
     //MT maiusculo e minusculo; dois dígitos; ponto; tres digitos; traço; iftm  
-    var padraoE = /^MT-\d{2}.\d{3}-(IFTM|iftm)$/
+    var padraoE = /^MT-\d{2}.\d{3}-(I|i)(F|f)(T|t)(M|m)$/
 
     if (padraoE.test(textoE))
         alert("Dentro do padrão");
@@ -89,10 +89,10 @@ function validarF() {
     //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúsculas e minúsculas)  
     //var padraoF = /^MT-\d{2}.\d{3}-IFTM$/i 
 
-    //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúscolas e minúscolas) com espaço em branco entre M e T
-    var padraoF = /^M\s{0,1}T-\d{2}.\d{3}-IFTM$/i
+    //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúsculas e minúsculas) com espaço em branco entre M e T
+    //var padraoF = /^M\s{0,1}T-\d{2}.\d{3}-IFTM$/i
 
-    //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúscolas e minúscolas) com espaço em branco MT e IFTM
+    //MT; dois dígitos; ponto; tres digitos; traço; iftm (maiúsculas e minúsculas) com espaço em branco MT e IFTM
     var padraoF = /^M\s{0,1}T-\d{2}.\d{3}-I\s{0,1}F\s{0,1}T\s{0,1}M$/i
 
     if (padraoF.test(textoF))
@@ -175,10 +175,10 @@ function validarJ() {
     //até 999
     //var padraoJ = /^R\$\d{1,3},\d{1,2}$/
 
-    //um ou três dígitos no começo; ponto e três dígitos zero ou infinitas vezes; separados por ponto; vírgula e dois dígitoa no final
+    //um ou três dígitos no começo; ponto e três dígitos zero ou infinitas vezes; separados por ponto; vírgula e dois dígitos no final
     //var padraoJ = /^R\$\d{1,3}(.\d{3})*,\d{2}$/;
 
-    //um ou três dígitos no começo; ponto e três dígitos zero ou três vezes; separados por ponto; vírgula e dois dígitoa no final
+    //um ou três dígitos no começo; ponto e três dígitos zero ou três vezes; separados por ponto; vírgula e dois dígitos no final
     var padraoJ = /^R\$\d{1,3}(.\d{3}){0,3},\d{2}$/;
 
     if (padraoJ.test(textoJ))
@@ -212,23 +212,24 @@ function validarL() {
     var textoL = document.getElementById("txtInfoL").value;
 
     //X&W.Y.Z-U,V.T ou X&W.Y-U,V.T
-    //X     (cinco caracteres alfanuméricos e um símbolo)
-    //var padraoL = /^\w{5}(.|-|,|_)$/;
-    //W     apenas letras maiúsculas ou minúsculas de "a" a "p"
-    //var padraoL = /^([a-pA-P])*$/;
-    //Y    apenas vogais minúsculas (pelo menos 1)
-    //var padraoL = /^([a-e-i-o-u])*$/;
-    //Z    apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional)
-    //var padraoL = /^(([a-z])*|([A-Z])*)([0-5]?)$/;
-    //U    deverá ser caracteres diferentes de números
-    //var padraoL = /^\D$/;
-    //U    deverá ser caracteres diferentes de números (pelo menos 1)
-    //????  var padraoL = /^\D$/;
-    //V     deverá ser 2 caracteres especiais
-    //var padraoL = /[^a-zA-Z0-9]$/; //falta limitar a 2
-    //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
-    var padraoL = /[^ab01]$/    //falta colocar 1 ou vários
 
+    //X deverá ser no mínimo 5 (cinco) caracteres alfanuméricos, além de um dos seguintes símbolos (“.”, “-”,”_”)
+    var x = /^\w{5,}(\.|\-|\_)$/;
+    //W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1)
+    var w = /^([a-pA-P]){1,}$/;
+    //Y    apenas vogais minúsculas (pelo menos 1)
+    var y = /^(a|e|i|o|u){1,}$/;
+    //Z    apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional)
+    var z = /^[a-zA-Z]{1,}([0-5]?)$/;
+    //U    deverá ser caracteres diferentes de números (pelo menos 1)
+    var u = /^\D{1,}$/;
+    //V     deverá ser 2 caracteres especiais
+    var v = /^[^a-zA-Z0-9]{2}$/;
+    //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
+    var t = /^[^(a|b|0|1)]{1,}$/  
+    //^(?=.[0-9]{2,})  (?=.[a-z]{2,})  (?=.[A-Z])  (?=.[@#$%^&+=])  (?=\S+$)  .{8,}$/
+    //"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$"
+    var padraoL = /^(?=.\w{5,}(\.|\-|\_))(?=\S+$)$/;
     if (padraoL.test(textoL))
         alert("Dentro do padrão");
     else
