@@ -5,220 +5,199 @@
     <meta charset="UTF-8">
     <title>Exercicio 1 - Lista 04</title>
     <script src="ex01.js"></script>
+    <script type="text/javascript" src="jwifi.js"></script>
     <link rel="stylesheet" href="ex01.css">
 </head>
 
 <body>
- <script type="text/javascript" src="jwifi.js"></script>
- <form>
-<table>
-    <!-- EXERCÍCIO A -->
-    <tr>
-        <td class="Coluna1">
-            <label for="txtInfoA">Data de nascimento: </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoA">
-        </td>
-        <td>
-            <input type="button" value="Validar" onclick="validarA()">
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(dd/mm/aaaa ou dd/mm/aa)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO B -->
-    <tr>
-        <td class="">
-            <label for="txtInfoB">CPF (com jwifi): </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoB" onKeyPress="inserirMascara('txtInfoB','xxx.xxx.xxx-xx')" >
-        </td>                                <!-- MÁSCARA PARA O CAMPO txtInfoB -->
-        <td>
-            <input type="button" value="Validar" onclick="validarB()" >
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(xxx.xxx.xxx-xx)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO C -->
-    <tr>
-        <td class="">
-            <label for="txtInfoC">IFTM Matrícula: </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoC">
-        </td>
-        <td>
-            <input type="button" value="Validar" onclick="validarC()">
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO D-->
-    <tr>
-        <td class="">
-            <label for="txtInfoD">Código de uma disciplina do IFTM: </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoD">
-        </td>
-        <td>
-            <input type="button" value="Validar" onclick="validarD()">
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO E-->
-    <tr>
-        <td class="">
-            <label for="txtInfoE">Código de uma disciplina do IFTM -V2 (com jwifi): </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoE" onKeyPress="inserirMascara('txtInfoE','xx-xx.xxx-xxxx')" >
-        </td>                                <!-- MÁSCARA PARA O CAMPO txtInfoE -->
-        <td>
-            <input type="button" value="Validar" onclick="validarE()">
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM) (MT maiúsculo)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO F-->
-    <tr>
-        <td class="">
-            <label for="txtInfoF">Código de uma disciplina do IFTM -V3: </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoF">
-        </td>
-        <td>
-            <input type="button" F" value="Validar" onclick="validarF()">
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM)(com espaços) </label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO G-->
-    <tr>
-        <td class="">
-            <label for="txtInfoG">Código de uma disciplina do IFTM -V4 (conjwifi): </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoG"  onKeyPress="inserirMascara('txtInfoG','xx-xx.xxx-xxxx xxxxxxxxxx xxxxxx')" />
-        </td>                                 <!-- MÁSCARA PARA O CAMPO txtInfoG -->
-        <td>
-            <input type="button" G" value="Validar" onclick="validarG()" />
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM Y)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO H-->
-    <tr>
-        <td class="">
-            <label for="txtInfoH">Telefone: </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoH">
-        </td>
-        <td>
-            <input type="button" H" value="Validar" onclick="validarH()">
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(+yy(xx)xxxxx-xxxx)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO I-->
-    <tr>
-        <td class="">
-            <label for="txtInfoI">Telefone -V2: </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoI">
-        </td>
-        <td>
-            <input type="button" I" value="Validar" onclick="validarI()">
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">((xx)xxxxx-xxxx ou (xxx)xxxxx-xxxx)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO J-->
-    <tr>
-        <td class="">
-            <label for="txtInfoJ">Faturamento anual de uma empresa: </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoJ">
-        </td>
-        <td>
-            <input type="button" J" value="Validar" onclick="validarJ()">
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(R$0,00 até R$999.999.999.999,99)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO K-->
-    <tr>
-        <td class="">
-            <label for="txtInfoK">Cronômetro: </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoK" onKeyPress="inserirMascara('txtInfoK','xx:xx:xx:xx')" />
-        </td>                                <!-- MÁSCARA PARA O CAMPO txtInfoK -->
-        <td>
-            <input type="button" K" value="Validar" onclick="validarK()" />
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(HH:MM:SS:CC)-(23:59:59:99)</label>
-        </td>
-        <hr>
-    </tr>
-        <br><br>
-    <!-- EXERCÍCIO L-->
-    <tr>
-        <td class="">
-            <label for="txtInfoL">Senha: </label>
-        </td>
-        <td>
-            <input type="text" id="txtInfoL">
-        </td>
-        <td>
-            <input type="button" L" value="Validar" onclick="validarL()">
-        </td>
-        <td>
-            <label for="descricao" class="vermelho">(X&W.Y.Z-U,V.T ou
-                    X&W.Y-U,V.T)(21a.&apMb.aei.Ab0-asf+_,/*.cq)</label>
-        </td>
-        <hr>
-    </tr>
-</table>
- </form>
- <script src="ex01.js"></script>
+    <script type="text/javascript" src="jwifi.js"></script>
+    <form>
+        <table>
+            <!-- EXERCÍCIO A -->
+            <tr>
+                <td class="Coluna1">
+                    <label for="txtInfoA" class="esquerda">Data de nascimento: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoA">
+                </td>
+                <td>
+                    <input type="button" value="Validar" onclick="validarA()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(dd/mm/aaaa ou dd/mm/aa)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO B -->
+            <tr>
+                <td class="">
+                    <label for="txtInfoB"class="esquerda">CPF (com jwifi): </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoB" onKeyPress="inserirMascara('txtInfoB','xxx.xxx.xxx-xx')">
+                </td> <!-- MÁSCARA PARA O CAMPO txtInfoB -->
+                <td>
+                    <input type="button" value="Validar" onclick="validarB()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(xxx.xxx.xxx-xx)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO C -->
+            <tr>
+                <td class="">
+                    <label for="txtInfoC" class="esquerda">IFTM Matrícula: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoC">
+                </td>
+                <td>
+                    <input type="button" value="Validar" onclick="validarC()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO D-->
+            <tr>
+                <td class="">
+                    <label for="txtInfoD" class="esquerda">Código de uma disciplina do IFTM: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoD">
+                </td>
+                <td>
+                    <input type="button" value="Validar" onclick="validarD()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO E-->
+            <tr>
+                <td class="">
+                    <label for="txtInfoE" class="esquerda">Código de uma disciplina do IFTM -V2 (com jwifi): </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoE" onKeyPress="inserirMascara('txtInfoE','xx-xx.xxx-xxxx')">
+                </td> <!-- MÁSCARA PARA O CAMPO txtInfoE -->
+                <td>
+                    <input type="button" value="Validar" onclick="validarE()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM) (MT maiúsculo)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO F-->
+            <tr>
+                <td class="">
+                    <label for="txtInfoF" class="esquerda">Código de uma disciplina do IFTM -V3: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoF">
+                </td>
+                <td>
+                    <input type="button" F" value="Validar" onclick="validarF()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM)(com espaços) </label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO G-->
+            <tr>
+                <td class="">
+                    <label for="txtInfoG" class="esquerda">Código de uma disciplina do IFTM -V4 (conjwifi): </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoG"
+                        onKeyPress="inserirMascara('txtInfoG','xx-xx.xxx-xxxx xxxxxxxxxx xxxxxx')" />
+                </td> <!-- MÁSCARA PARA O CAMPO txtInfoG -->
+                <td>
+                    <input type="button" G" value="Validar" onclick="validarG()" />
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM Y)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO H-->
+            <tr>
+                <td class="">
+                    <label for="txtInfoH" class="esquerda">Telefone: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoH">
+                </td>
+                <td>
+                    <input type="button" H" value="Validar" onclick="validarH()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(+yy(xx)xxxxx-xxxx)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO I-->
+            <tr>
+                <td class="">
+                    <label for="txtInfoI" class="esquerda">Telefone -V2: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoI">
+                </td>
+                <td>
+                    <input type="button" I" value="Validar" onclick="validarI()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">((xx)xxxxx-xxxx ou (xxx)xxxxx-xxxx)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO J-->
+            <tr>
+                <td class="">
+                    <label for="txtInfoJ" class="esquerda">Faturamento anual de uma empresa: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoJ">
+                </td>
+                <td>
+                    <input type="button" J" value="Validar" onclick="validarJ()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(R$0,00 até R$999.999.999.999,99)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO K-->
+            <tr>
+                <td class="">
+                    <label for="txtInfoK" class="esquerda">Cronômetro: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoK" onKeyPress="inserirMascara('txtInfoK','xx:xx:xx:xx')" />
+                </td> <!-- MÁSCARA PARA O CAMPO txtInfoK -->
+                <td>
+                    <input type="button" K" value="Validar" onclick="validarK()" />
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(HH:MM:SS:CC)-(23:59:59:99)</label>
+                </td>
+            </tr>
+            <!-- EXERCÍCIO L-->
+            <tr>
+                <td class="">
+                    <label for="txtInfoL" class="esquerda">Senha: </label>
+                </td>
+                <td>
+                    <input type="text" id="txtInfoL">
+                </td>
+                <td>
+                    <input type="button" L" value="Validar" onclick="validarL()">
+                </td>
+                <td>
+                    <label for="descricao" class="vermelho">(X&W.Y.Z-U,V.T ou
+                        X&W.Y-U,V.T)(21a.&apMb.aei.Ab0-asf+_,/*.cq)</label>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="ex01.js"></script>
 </body>
 
 </html>

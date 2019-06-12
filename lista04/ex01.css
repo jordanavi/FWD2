@@ -33,3 +33,6 @@ input, select {
     border-color:#aaa; box-sizing:border-box; width:50%;
 } */
 
+.esquerda{
+    text-align: right;
+}

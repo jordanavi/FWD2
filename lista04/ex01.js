@@ -214,7 +214,7 @@ function validarL() {
     //X&W.Y.Z-U,V.T ou X&W.Y-U,V.T
 
     //X deverá ser no mínimo 5 (cinco) caracteres alfanuméricos, além de um dos seguintes símbolos (“.”, “-”,”_”)
-    var x = /^\w{5,}(\.|\-|\_)$/;
+    var x = /^(\w|\.|\-|\_){5,}$/;
     //W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1)
     var w = /^([a-pA-P]){1,}$/;
     //Y    apenas vogais minúsculas (pelo menos 1)
@@ -229,7 +229,11 @@ function validarL() {
     var t = /^[^(a|b|0|1)]{1,}$/  
     //^(?=.[0-9]{2,})  (?=.[a-z]{2,})  (?=.[A-Z])  (?=.[@#$%^&+=])  (?=\S+$)  .{8,}$/
     //"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$"
-    var padraoL = /^(?=.\w{5,}(\.|\-|\_))(?=\S+$)$/;
+    //var padraoL = /^(?=.\w{5,}(\.|\-|\_))$/;
+    console.log(typeof(x));
+    
+    var padraoL = /^(\w|\.|\-|\_){5,}&([a-pA-P]){1,}$/;
+
     if (padraoL.test(textoL))
         alert("Dentro do padrão");
     else
