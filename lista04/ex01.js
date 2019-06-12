@@ -232,7 +232,7 @@ function validarL() {
     //var padraoL = /^(?=.\w{5,}(\.|\-|\_))$/;
     console.log(typeof(x));
     
-    var padraoL = /^(\w|\.|\-|\_){5,}&([a-pA-P]){1,}$/;
+    var padraoL = /^(\w|\.|\-|\_){5,}&([a-pA-P]){1,}\.(a|e|i|o|u){1,}$/;
 
     if (padraoL.test(textoL))
         alert("Dentro do padrão");
