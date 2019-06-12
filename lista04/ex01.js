@@ -220,7 +220,8 @@ function validarL() {
     //Y    apenas vogais minúsculas (pelo menos 1)
     var y = /^(a|e|i|o|u){1,}$/;
     //Z    apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional)
-    var z = /^[a-zA-Z]{1,}([0-5]?)$/;
+    //var zAntigo = /^(([a-zAZ]{1,}|[0-5]{1,})|([a-zAZ0-5]{1,}))?$/;
+    var z = /^(([a-zAZ]{1,}|[0-5]{0,})|([a-zA-Z0-5]{1,}))?$/;
     //U    deverá ser caracteres diferentes de números (pelo menos 1)
     var u = /^\D{1,}$/;
     //V     deverá ser 2 caracteres especiais
@@ -231,8 +232,9 @@ function validarL() {
     //"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$"
     //var padraoL = /^(?=.\w{5,}(\.|\-|\_))$/;
     console.log(typeof(x));
-    
-    var padraoL = /^(\w|\.|\-|\_){5,}&([a-pA-P]){1,}\.(a|e|i|o|u){1,}$/;
+
+    //testar até o z:   adbde-&ab.aeiou.abcde0
+    var padraoL = /^(\w|\.|\-|\_){5,}\&([a-pA-P]){1,}\.(a|e|i|o|u){1,}(\.(([a-zA-Z]{1,})|([0-5]{0,})|([a-zA-Z0-5]{1,}))?)$/;
 
     if (padraoL.test(textoL))
         alert("Dentro do padrão");
