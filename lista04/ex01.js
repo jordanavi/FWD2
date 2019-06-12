@@ -6,7 +6,7 @@ function validarA() {
     if (padraoA.test(textoA))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
 }
 
 //EXERCÍCIO B
@@ -28,7 +28,7 @@ function validarB() {
     if (padraoB.test(textoB))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
 }
 
 //EXERCÍCIO C
@@ -53,7 +53,7 @@ function validarC() {
     if (padraoC.test(textoC))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
 }
 
 //EXERCÍCIO E
@@ -66,7 +66,7 @@ function validarE() {
     if (padraoE.test(textoE))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
 }
 
 //EXERCÍCIO F
@@ -85,7 +85,7 @@ function validarF() {
     if (padraoF.test(textoF))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
 }
 
 //EXERCÍCIO G
@@ -117,7 +117,7 @@ function validarG() {
     if (padraoG.test(textoG))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
 }
 //EXERCÍCIO H
 function validarH() {
@@ -132,7 +132,7 @@ function validarH() {
     if (padraoH.test(textoH))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
 }
 //EXERCÍCIO I
 function validarI() {
@@ -147,7 +147,7 @@ function validarI() {
     if (padraoI.test(textoI))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
 }
 //EXERCÍCIO J
 function validarJ() {
@@ -171,7 +171,7 @@ function validarJ() {
     if (padraoJ.test(textoJ))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
 }
 //EXERCÍCIO K
 function validarK() {
@@ -192,5 +192,32 @@ function validarK() {
     if (padraoK.test(textoK))
         alert("Dentro do padrão");
     else
-        alert("Fora do pardão");
+        alert("Fora do padrão");
+}
+//EXERCÍCIO L
+function validarL() {
+    var textoL = document.getElementById("txtInfoL").value;
+
+    //X&W.Y.Z-U,V.T ou X&W.Y-U,V.T
+    //X     (cinco caracteres alfanuméricos e um símbolo)
+    //var padraoL = /^\w{5}(.|-|,|_)$/;
+    //W     apenas letras maiúsculas ou minúsculas de "a" a "p"
+    //var padraoL = /^([a-pA-P])*$/;
+    //Y    apenas vogais minúsculas (pelo menos 1)
+    //var padraoL = /^([a-e-i-o-u])*$/;
+    //Z    apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional)
+    //var padraoL = /^(([a-z])*|([A-Z])*)([0-5]?)$/;
+    //U    deverá ser caracteres diferentes de números
+    //var padraoL = /^\D$/;
+    //U    deverá ser caracteres diferentes de números (pelo menos 1)
+    //????  var padraoL = /^\D$/;
+    //V     deverá ser 2 caracteres especiais
+    //var padraoL = /[^a-zA-Z0-9]$/; //falta limitar a 2
+    //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
+    var padraoL = /[^ab01]$/    //falta colocar 1 ou vários
+
+    if (padraoL.test(textoL))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do padrão");
 }

@@ -1,0 +1,35 @@
+* {
+    font-family: Arial, Helvetica, sans-serif; 
+ }
+ input[type="button"], input[type="reset"] {
+    background-color: fuchsia;
+    border: none;
+    color:white;
+    border-radius: 20px;
+    /* margin: 5px; */
+    padding:10px;
+    transition: all 0.3s;
+    width: 150px;
+    /* align-self: center; */
+}
+input[type="button"]:hover, input[type="reset"]:hover {
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+label {
+    display: block;
+    /* font-weight: bold; */
+    color:darkblue;
+}
+
+input, select {
+    width: 20%;
+}
+.vermelho{
+    color: rgb(184, 68, 68);
+}
+/* hr{
+    border-color:#aaa; box-sizing:border-box; width:50%;
+} */
+
