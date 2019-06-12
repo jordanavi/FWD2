@@ -15,13 +15,13 @@
     <!-- EXERCÍCIO A -->
     <tr>
         <td class="Coluna1">
-            <label for="validaA">Data de nascimento: </label>
+            <label for="txtInfoA">Data de nascimento: </label>
         </td>
         <td>
             <input type="text" id="txtInfoA">
         </td>
         <td>
-            <input type="button" id="validaA" value="Validar" onclick="validarA()">
+            <input type="button" value="Validar" onclick="validarA()">
         </td>
         <td>
             <label for="descricao" class="vermelho">(dd/mm/aaaa ou dd/mm/aa)</label>
@@ -32,15 +32,14 @@
     <!-- EXERCÍCIO B -->
     <tr>
         <td class="">
-            <label for="validaB">CPF (com jwifi): </label>
+            <label for="txtInfoB">CPF (com jwifi): </label>
         </td>
         <td>
-            <input type="text" id="txtInfoB">
-        </td>
+            <input type="text" id="txtInfoB" onKeyPress="inserirMascara('txtInfoB','xxx.xxx.xxx-xx')" >
+        </td>                                <!-- MÁSCARA PARA O CAMPO txtInfoB -->
         <td>
-            <input type="button" id="validaB" value="Validar" id="validaB" onclick="validarB()" 
-                                        onKeyPress="inserirMascara('validaB','xxx.xxx.xxx-xx')" >
-        </td>                           <!-- MÁSCARA PARA O CAMPO validaB -->
+            <input type="button" value="Validar" onclick="validarB()" >
+        </td>
         <td>
             <label for="descricao" class="vermelho">(xxx.xxx.xxx-xx)</label>
         </td>
@@ -50,13 +49,13 @@
     <!-- EXERCÍCIO C -->
     <tr>
         <td class="">
-            <label for="validaC">IFTM Matrícula: </label>
+            <label for="txtInfoC">IFTM Matrícula: </label>
         </td>
         <td>
             <input type="text" id="txtInfoC">
         </td>
         <td>
-            <input type="button" id="validaC" value="Validar" onclick="validarC()">
+            <input type="button" value="Validar" onclick="validarC()">
         </td>
         <td>
             <label for="descricao" class="vermelho">(IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy)</label>
@@ -67,13 +66,13 @@
     <!-- EXERCÍCIO D-->
     <tr>
         <td class="">
-            <label for="validaD">Código de uma disciplina do IFTM: </label>
+            <label for="txtInfoD">Código de uma disciplina do IFTM: </label>
         </td>
         <td>
             <input type="text" id="txtInfoD">
         </td>
         <td>
-            <input type="button" id="validaD" value="Validar" onclick="validarD()">
+            <input type="button" value="Validar" onclick="validarD()">
         </td>
         <td>
             <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM)</label>
@@ -84,15 +83,14 @@
     <!-- EXERCÍCIO E-->
     <tr>
         <td class="">
-            <label for="validaE">Código de uma disciplina do IFTM -V2 (com jwifi): </label>
+            <label for="txtInfoE">Código de uma disciplina do IFTM -V2 (com jwifi): </label>
         </td>
         <td>
-            <input type="text" id="txtInfoE">
-        </td>
+            <input type="text" id="txtInfoE" onKeyPress="inserirMascara('txtInfoE','xx-xx.xxx-xxxx')" >
+        </td>                                <!-- MÁSCARA PARA O CAMPO txtInfoE -->
         <td>
-            <input type="button" id="validaE" value="Validar" onclick="validarE()" 
-                            onKeyPress="inserirMascara('validaE','xx-xx.xxx-xxxx')" >
-        </td>               <!-- MÁSCARA PARA O CAMPO validaE -->
+            <input type="button" value="Validar" onclick="validarE()">
+        </td>
         <td>
             <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM) (MT maiúsculo)</label>
         </td>
@@ -102,13 +100,13 @@
     <!-- EXERCÍCIO F-->
     <tr>
         <td class="">
-            <label for="validaF">Código de uma disciplina do IFTM -V3: </label>
+            <label for="txtInfoF">Código de uma disciplina do IFTM -V3: </label>
         </td>
         <td>
             <input type="text" id="txtInfoF">
         </td>
         <td>
-            <input type="button" id="validaF" value="Validar" onclick="validarF()">
+            <input type="button" F" value="Validar" onclick="validarF()">
         </td>
         <td>
             <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM)(com espaços) </label>
@@ -119,15 +117,14 @@
     <!-- EXERCÍCIO G-->
     <tr>
         <td class="">
-            <label for="validaG">Código de uma disciplina do IFTM -V4 (conjwifi): </label>
+            <label for="txtInfoG">Código de uma disciplina do IFTM -V4 (conjwifi): </label>
         </td>
         <td>
-            <input type="text" id="txtInfoG">
-        </td>
+            <input type="text" id="txtInfoG"  onKeyPress="inserirMascara('txtInfoG','xx-xx.xxx-xxxx xxxxxxxxxx xxxxxx')" />
+        </td>                                 <!-- MÁSCARA PARA O CAMPO txtInfoG -->
         <td>
-            <input type="button" id="validaG" value="Validar" onclick="validarG()" 
-                onKeyPress="inserirMascara('validaG','xx-xx.xxx-xxxx xxxxxxxxxx xxxxxx')" />
-        </td>   <!-- MÁSCARA PARA O CAMPO validaG -->
+            <input type="button" G" value="Validar" onclick="validarG()" />
+        </td>
         <td>
             <label for="descricao" class="vermelho">(MT-xx.xxx-IFTM Y)</label>
         </td>
@@ -137,13 +134,13 @@
     <!-- EXERCÍCIO H-->
     <tr>
         <td class="">
-            <label for="validaH">Telefone: </label>
+            <label for="txtInfoH">Telefone: </label>
         </td>
         <td>
             <input type="text" id="txtInfoH">
         </td>
         <td>
-            <input type="button" id="validaH" value="Validar" onclick="validarH()">
+            <input type="button" H" value="Validar" onclick="validarH()">
         </td>
         <td>
             <label for="descricao" class="vermelho">(+yy(xx)xxxxx-xxxx)</label>
@@ -154,13 +151,13 @@
     <!-- EXERCÍCIO I-->
     <tr>
         <td class="">
-            <label for="validaI">Telefone -V2: </label>
+            <label for="txtInfoI">Telefone -V2: </label>
         </td>
         <td>
             <input type="text" id="txtInfoI">
         </td>
         <td>
-            <input type="button" id="validaI" value="Validar" onclick="validarI()">
+            <input type="button" I" value="Validar" onclick="validarI()">
         </td>
         <td>
             <label for="descricao" class="vermelho">((xx)xxxxx-xxxx ou (xxx)xxxxx-xxxx)</label>
@@ -171,13 +168,13 @@
     <!-- EXERCÍCIO J-->
     <tr>
         <td class="">
-            <label for="validaJ">Faturamento anual de uma empresa: </label>
+            <label for="txtInfoJ">Faturamento anual de uma empresa: </label>
         </td>
         <td>
             <input type="text" id="txtInfoJ">
         </td>
         <td>
-            <input type="button" id="validaJ" value="Validar" onclick="validarJ()">
+            <input type="button" J" value="Validar" onclick="validarJ()">
         </td>
         <td>
             <label for="descricao" class="vermelho">(R$0,00 até R$999.999.999.999,99)</label>
@@ -188,15 +185,14 @@
     <!-- EXERCÍCIO K-->
     <tr>
         <td class="">
-            <label for="validaK">Cronômetro: </label>
+            <label for="txtInfoK">Cronômetro: </label>
         </td>
         <td>
-            <input type="text" id="txtInfoK">
-        </td>
+            <input type="text" id="txtInfoK" onKeyPress="inserirMascara('txtInfoK','xx:xx:xx:xx')" />
+        </td>                                <!-- MÁSCARA PARA O CAMPO txtInfoK -->
         <td>
-            <input type="button" id="validaK" value="Validar" onclick="validarK()" 
-                            onKeyPress="inserirMascara('validaK','xx:xx:xx:xx')" />
-        </td>               <!-- MÁSCARA PARA O CAMPO validaK -->
+            <input type="button" K" value="Validar" onclick="validarK()" />
+        </td>
         <td>
             <label for="descricao" class="vermelho">(HH:MM:SS:CC)-(23:59:59:99)</label>
         </td>
@@ -206,13 +202,13 @@
     <!-- EXERCÍCIO L-->
     <tr>
         <td class="">
-            <label for="validaL">Padrão doido: </label>
+            <label for="txtInfoL">Senha: </label>
         </td>
         <td>
             <input type="text" id="txtInfoL">
         </td>
         <td>
-            <input type="button" id="validaL" value="Validar" onclick="validarL()">
+            <input type="button" L" value="Validar" onclick="validarL()">
         </td>
         <td>
             <label for="descricao" class="vermelho">(X&W.Y.Z-U,V.T ou

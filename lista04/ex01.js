@@ -56,6 +56,19 @@ function validarC() {
         alert("Fora do padrão");
 }
 
+//EXERCÍCIO D
+function validarD() {
+    var textoD = document.getElementById("txtInfoD").value;
+
+    //MT maiusculo e minusculo; dois dígitos; ponto; tres digitos; traço; iftm  
+    var padraoD = /^MT-\d{2}.\d{3}-IFTM$/i
+
+    if (padraoD.test(textoD))
+        alert("Dentro do padrão");
+    else
+        alert("Fora do padrão");
+}
+
 //EXERCÍCIO E
 function validarE() {
     var textoE = document.getElementById("txtInfoE").value;
