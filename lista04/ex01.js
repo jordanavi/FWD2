@@ -234,7 +234,7 @@ function validarL() {
     console.log(typeof(x));
 
     //testar até o z:   adbde-&ab.aeiou.abcde0
-    var padraoL = /^(\w|\.|\-|\_){5,}\&([a-pA-P]){1,}\.(a|e|i|o|u){1,}(\.(([a-zA-Z]{1,})|([0-5]{0,})|([a-zA-Z0-5]{1,}))?)$/;
+    var padraoL = /^(\w|\.|\-|\_){5,}\&([a-pA-P]){1,}\.(a|e|i|o|u){1,}(\.(([a-zA-Z]{1,})|([0-5]{0,})|([a-zA-Z0-5]{1,}))?)\-(\D{1,})\,([^a-zA-Z0-9]{2})\.([^(a|b|0|1)]{1,})$/;
 
     if (padraoL.test(textoL))
         alert("Dentro do padrão");
