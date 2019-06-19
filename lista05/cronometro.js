@@ -48,4 +48,10 @@ function pauseBtn(){
     document.getElementById("pause").disabled=true;
 }
 
-
+function stopBtn(){
+    document.getElementById("play").disabled=true;
+    document.getElementById("pause").disabled=true;
+    document.getElementById("stop").disabled=true;
+    document.getElementById("reset").disabled=false;
+    pausa = true;
+}
