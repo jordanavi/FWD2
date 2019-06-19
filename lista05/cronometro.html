@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Cronômetro</title>
     <script src="cronometro.js"></script>
     <link rel="stylesheet" href="cronometro.css">
- 
 </head>
+
 <body>
-    <form action="">
-    <!-- <label for="txtInfo">Texto</label> -->
-        <!-- <input type="text" id="valor"> -->
-        <table>
-            <th>Cronômetro</th>
+    <fieldset class="centralizado">
+        <legend id="titulo">Cronômetro</legend>
+        <br>
+        <table align="center">
             <tr>
-                <td id="paragrafo">00:00:00</td>
-                <td><input type="button" value="Play" onclick="playBtn()"></td>
-                <td><input type="button" value="Pause" onclick="pauseBtn()"></td>
-                <td><input type="button" value="Stop" onclick="stopBtn()"></td>
+                <td>hh</td>
+                <td>:</td>
+                <td>mm</td>
+                <td>:</td>
+                <td>ss</td>
             </tr>
         </table>
-       <!-- <p id="paragrafo">Jordana Vilela Martins</p> -->
-       <!-- <br> -->
-    </form>   
+        <br><br>
+        <input type="button" value="Play" onclick="playBtn()">
+        <input type="button" value="Pause" onclick="pauseBtn()">
+        <input type="button" value="Stop" onclick="stopBtn()">
+        <input type="button" value="Reset" onclick="resetBtn()">
+    </fieldset>
 </body>
+
 </html>
