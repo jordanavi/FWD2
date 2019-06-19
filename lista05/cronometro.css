@@ -34,3 +34,7 @@ table{
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
+fieldset{
+    border-color: #f8cb8d;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+}

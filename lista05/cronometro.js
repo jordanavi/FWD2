@@ -55,3 +55,19 @@ function stopBtn(){
     document.getElementById("reset").disabled=false;
     pausa = true;
 }
+
+function resetBtn(){
+    document.getElementById("play").disabled=false;
+    document.getElementById("pause").disabled=true;
+    document.getElementById("stop").disabled=true;
+    document.getElementById("reset").disabled=true;
+
+    document.getElementById("sec").innerHTML="00";
+    document.getElementById("min").innerHTML="00";
+    document.getElementById("hor").innerHTML="00";
+    
+    contaSegundo = 0;
+    contaMinuto = 0;
+    contaHora = 0;
+
+}
