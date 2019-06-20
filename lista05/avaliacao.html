@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <title>Cronômetro</title>
-    <script src="cronometro2.js"></script>
-    <link rel="stylesheet" href="cronometro.css">
+    <link rel="stylesheet" href="avaliacao.css">
 </head>
-
 <body>
     <fieldset class="centralizado">
         <legend id="titulo">Cronômetro</legend>
         <br>
         <table align="center">
             <tr>
-                <td id="hor">00</td>
-                <td >:</td>
-                <td id="min">00</td>
+                <td><input type="text" id="hora" value="00" onfocus="this.value=''" class="caixa" maxlength="2" size="2"></td>
                 <td>:</td>
-                <td id="sec">00</td>
+                <td><input type="text" id="minuto" value="00" onfocus="this.value=''" class="caixa" maxlength="2" size="2"></td>
+                <td>:</td>
+                <td><input type="text" id="segundo" value="00" onfocus="this.value=''" class="caixa" maxlength="2" size="2"></td>
             </tr>
         </table>
-        <br><br>
+        <br>
         <input type="button" id="play" value="Play" onclick="playBtn()">
         <input type="button" id="pause" value="Pause" onclick="pauseBtn()" disabled>
         <input type="button" id="stop" value="Stop" onclick="stopBtn()" disabled>
         <!-- <input type="button" id="reset" value="Reset" onclick="resetBtn()" disabled> -->
     </fieldset>
-
+    <script src="avaliacao.js"></script>
 </body>
-
 </html>
