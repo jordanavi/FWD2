@@ -1,0 +1,112 @@
+#titulo{
+    color: beige;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: black 2px 2px 5px;
+    margin: auto;
+}
+#titbolihas{
+    color: red;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: black 2px 2px 5px;  
+    /* border-top: 10px solid rgb(109, 238, 195); */
+    margin: 0px;
+}
+#menu,#imagem,#legenda{
+    float: left;
+}
+#topo{
+    height: 120px;
+    background-color: rgb(108, 57, 28);
+    background-image: URL("../img/fundo3.jpg");
+    margin: auto;
+    /* border-bottom: 10px solid rgb(109, 238, 195); */
+}
+#menu{
+    padding: 20px;
+    width: 300px;
+    margin-left: 0;
+    padding-left: 0;
+}
+#imagem{
+    width: 500px;
+    margin: auto;
+}
+#legenda{
+    width: 300px;
+    margin: auto;
+}
+#bolinhas{
+    background-color:  rgb(108, 57, 28);
+    background-image: URL("../img/fundo3.jpg");
+    margin: auto;
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+body{
+    margin: 0px;
+}
+
+/* Lista não ordenada */
+ul{ 
+    list-style: none; /*tira a bolinha*/
+    padding: 0;
+    margin-left: 0;
+}
+
+li{
+    width: 250px;
+    text-align: right;
+    border-radius: 0px 15px 15px 0px;
+    margin: 5px 5px 5px 0px;
+}
+
+li a{
+    color: white;
+    background-color:  rgb(108, 57, 28);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    padding: 20px;
+    border-radius: 0px 15px 15px 0px;
+    transition: all 0.2s;
+}
+
+li a:hover{
+    background-color: rgb(252, 252, 186);
+    color:   rgb(108, 57, 28);
+    border-radius: 0px 15px 15px 0px;
+    transform-origin: top left;
+    transform: scaleX(1.1);
+}
+
+#imgMain{
+    height: 355px;
+}
+
+#logo{
+    position: absolute;
+    float: left;
+    width: 110px;
+    left: 15px;
+}
+.circulo{
+    border-radius: 50%;
+    border: 1px solid rgb(108, 57, 28);
+    background-color: rgb(108, 57, 28);
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 7px;
+}
+#centralizaBolinha{
+    position: relative;
+    left: 400px;
+
+}

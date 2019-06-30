@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Dinamico</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/funcoes.js"></script>
+
+        
+   <script>
+       function trocarImg(numImg){
+        document.getElementById("imgcor").src = "img/img"+numImg+".jpg";
+       }
+   </script>
+</head>
+<body>
+    <!-- <div>
+        <h1>Titulo</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio explicabo aspernatur rem quisquam dolorem aut id, voluptatibus laudantium nulla vero, fugit earum, delectus nihil dolore dolores consequatur quis repudiandae reprehenderit?</p>
+    </div> -->
+    <ul>
+        <!-- ul>(li>a)*5 -->
+        <li><a href="#" onmouseover="trocarImg(1)">Lógica de programação</a></li>
+        <li><a href="#" onmouseover="trocarImg(2)">Fundamentos de Web Desing I</a></li>
+        <li><a href="#" onmouseover="trocarImg(3)">Inglês instrumental</a></li>
+        <li><a href="#" onmouseover="trocarImg(4)">Metodologia Científica</a></li>
+        <li><a href="#" onmouseover="trocarImg(5)">Sistemas Operacional</a></li>
+    </ul>
+
+    <img src="img/img1.jpg" id="imgcor" alt="Imagem de coração">
+
+</body>
+</html>

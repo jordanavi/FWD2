@@ -1,0 +1,56 @@
+h1{
+    color: red;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: black 2px 2px 5px;  
+    border-bottom: 1px solid black;
+
+}
+div{
+    background-color: aquamarine;
+    padding: 20px;
+    width: 600px;
+    margin: auto;
+    transition: all 1s;
+}
+
+div:hover{
+    background-color: rgb(240, 150, 118);
+    box-shadow: 1px 1px 1px;
+}
+
+body{
+    margin: 0px;
+}
+
+/* Lista não ordenada */
+ul{ 
+    list-style: none; /* tira a bolinha */
+    padding: 0;
+}
+
+ul li{
+    width: 260px;
+    text-align: right;
+    background-color: rgb(189,191,9);
+    border-radius: 0px 15px 15px 0px;
+    margin: 5px 5px 5px 0px;
+}
+
+ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+    transition: all 0.5s;
+}
+
+li a:hover{
+    background-color: black;
+    color:  rgb(189,191,9);
+    transform: translateX(10px);
+}
+
