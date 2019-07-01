@@ -14,8 +14,8 @@
             document.getElementById("imgMain").src = "img/img" + numImg + ".png";
             resetaBolinha();
             document.getElementById("b" + numBolinha).style.backgroundColor = "rgb(252, 252, 186)";
-            
             document.getElementById("icon").src = "img/icon0" + numImg + ".png";
+            mudarLegenda(numImg);
         }
         function resetaBolinha() {
             document.getElementById("b1").style.backgroundColor = "rgb(108, 57, 28)";
@@ -24,7 +24,22 @@
             document.getElementById("b4").style.backgroundColor = "rgb(108, 57, 28)";
             document.getElementById("b5").style.backgroundColor = "rgb(108, 57, 28)";
         }
-
+        function mudarLegenda() {
+            switch (numLegenda){
+                case 1: document.getElementById("leg").innerHTML = "Banho e tosa";
+                break;
+                case 2: document.getElementById("leg").innerHTML = "Vacinação";
+                break;
+                case 3: document.getElementById("leg").innerHTML = "Adoções";
+                break;
+                case 4: document.getElementById("leg").innerHTML = "Vendas";
+                break;
+                case 5: document.getElementById("leg").innerHTML = "Atendimento veterinário";
+                break;
+                case 0: ocument.getElementById("leg").innerHTML = "Ops";
+                break;
+            }
+        }
         function imgIni() {
             document.getElementById("imgMain").src = "img/img0.png"
         }
@@ -33,24 +48,24 @@
 
 <body>
     <div id="topo">
-        <a href=# onclick="imgIni()" ><img src="img/logo.png" id="logo" alt="Imagem"></a>
-        <h1 id="titulo">Titulo</h1>
+        <a href=# onclick="imgIni()" id="hlink"><img src="img/logo.png" id="logo" alt="Imagem"></a>
+        <h1 id="titulo">Pet shop Totó</h1>
     </div>
     <div id="menu" onmouseleave="trocarImg(0,0)">
         <ul>
             <!-- ul>(li>a)*5 -->
-            <li><a href="#" onmouseover="trocarImg(1,1)">Banho e Tosa</a></li>
-            <li><a href="#" onmouseover="trocarImg(2,2)">Vacinação</a></li>
-            <li><a href="#" onmouseover="trocarImg(3,3)">Adoções</a></li>
-            <li><a href="#" onmouseover="trocarImg(4,4)">Vendas</a></li>
-            <li><a href="#" onmouseover="trocarImg(5,5)">Veterinário</a></li>
+            <li><a href="#" onmouseover="trocarImg(1,1)" id="txt1">Banho e Tosa</a></li>
+            <li><a href="#" onmouseover="trocarImg(2,2)" id="txt2">Vacinação</a></li>
+            <li><a href="#" onmouseover="trocarImg(3,3)" id="txt3">Adoções</a></li>
+            <li><a href="#" onmouseover="trocarImg(4,4)" id="txt4">Vendas</a></li>
+            <li><a href="#" onmouseover="trocarImg(5,5)" id="txt5">Veterinário</a></li>
         </ul>
     </div>
     <div id="imagem">
         <img src="img/img0.png" id="imgMain" alt="Imagem">
     </div>
     <div id="legenda">
-        <h1 id="leg">Mostrar conteúdo da imagem</h1>
+        <h1 id="leg">Pet shop</h1>
     </div>
     <div id="icone">
         <img src="img/icon01.png" id="icon">
