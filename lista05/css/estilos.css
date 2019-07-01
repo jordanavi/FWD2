@@ -28,14 +28,25 @@
     width: 300px;
     margin-left: 0;
     padding-left: 0;
+    background-color: violet;
 }
 #imagem{
     width: 500px;
     margin: auto;
+    background-color: black;
 }
 #legenda{
     width: 300px;
     margin: auto;
+    background-color: orangered;
+    text-align: center;
+}
+#icon{
+    margin: auto;
+    background-color: yellow;
+    float: left;
+    height: 100px;
+    display: inherit;
 }
 #bolinhas{
     background-color:  rgb(108, 57, 28);
@@ -108,5 +119,11 @@ li a:hover{
 #centralizaBolinha{
     position: relative;
     left: 400px;
+}
 
+#imgMain{
+    padding: 50px;
+    width: 300px;
+    height: 280px;
+    
 }

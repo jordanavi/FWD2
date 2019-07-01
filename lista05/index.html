@@ -14,6 +14,8 @@
             document.getElementById("imgMain").src = "img/img" + numImg + ".png";
             resetaBolinha();
             document.getElementById("b" + numBolinha).style.backgroundColor = "rgb(252, 252, 186)";
+            
+            document.getElementById("icon").src = "img/icon0" + numImg + ".png";
         }
         function resetaBolinha() {
             document.getElementById("b1").style.backgroundColor = "rgb(108, 57, 28)";
@@ -22,6 +24,7 @@
             document.getElementById("b4").style.backgroundColor = "rgb(108, 57, 28)";
             document.getElementById("b5").style.backgroundColor = "rgb(108, 57, 28)";
         }
+
         function imgIni() {
             document.getElementById("imgMain").src = "img/img0.png"
         }
@@ -30,7 +33,7 @@
 
 <body>
     <div id="topo">
-        <a href=# onclick="imgIni()" id="hlink"><img src="img/logo.png" id="logo" alt="Imagem"></a>
+        <a href=# onclick="imgIni()" ><img src="img/logo.png" id="logo" alt="Imagem"></a>
         <h1 id="titulo">Titulo</h1>
     </div>
     <div id="menu" onmouseleave="trocarImg(0,0)">
@@ -47,7 +50,10 @@
         <img src="img/img0.png" id="imgMain" alt="Imagem">
     </div>
     <div id="legenda">
-        <h1 id="leg">Titulo</h1>
+        <h1 id="leg">Mostrar conteúdo da imagem</h1>
+    </div>
+    <div id="icone">
+        <img src="img/icon01.png" id="icon">
     </div>
     <div id="bolinhas">
         <div id="centralizaBolinha">
