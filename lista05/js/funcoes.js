@@ -3,7 +3,12 @@ function trocarImg(numImg, numBolinha) {
     resetaBolinha();
     document.getElementById("b" + numBolinha).style.backgroundColor = "rgb(252, 252, 186)";
     document.getElementById("icon").src = "img/icon0" + numImg + ".png";
-    document.getElementById("txt0").innerHTML = document.getElementById("txt" + numImg).innerHTML;
+    if (numImg ==0 && numBolinha ==0){
+        document.getElementById("txt0").innerHTML = "Pet shop";
+    }
+    else{
+        document.getElementById("txt0").innerHTML = document.getElementById("txt" + numImg).innerHTML;
+    }
     //mudarLegenda(numImg);
 }
 function resetaBolinha() {

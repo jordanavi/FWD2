@@ -44,6 +44,8 @@ body{
     margin: auto;
     /* background-color: orangered; */
     text-align: center;
+    color:  rgb(108, 57, 28);
+    font-family: cursive;
 }
 #icon{
     margin: auto;
