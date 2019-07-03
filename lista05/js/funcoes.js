@@ -18,6 +18,12 @@ function resetaBolinha() {
     document.getElementById("b4").style.backgroundColor = "rgb(108, 57, 28)";
     document.getElementById("b5").style.backgroundColor = "rgb(108, 57, 28)";
 }
+// function imgIni() {
+//     document.getElementById("imgMain").src = "img/img0.png";
+//     //document.getElementById("txt0").innerHTML = "Pet Shop";
+// }
+
+
 /*function mudarLegenda() {
     switch (numLegenda){
         case 1: document.getElementById("leg").innerHTML = "Banho e tosa";
@@ -34,8 +40,4 @@ function resetaBolinha() {
         break;
     }
 } */
-function imgIni() {
-    document.getElementById("imgMain").src = "img/img0.png";
-    //document.getElementById("txt0").innerHTML = "Pet Shop";
-}
 
